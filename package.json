@@ -1,0 +1,39 @@
+{
+  "name": "ddd_user",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "tsnd --respawn --clear ./src/index.ts",
+    "start": "pm2 start ./dist/index.js",
+    "stop": "pm2 stop all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.2",
+    "@types/helmet": "^0.0.48",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.9",
+    "@types/node-cron": "^3.0.11",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "ts-node-dev": "^2.0.0",
+    "typeorm": "^0.3.21",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@types/signale": "^1.4.7",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.2.0",
+    "mysql": "^2.18.1",
+    "node-cron": "^3.0.3",
+    "signale": "^1.4.0"
+  }
+}
