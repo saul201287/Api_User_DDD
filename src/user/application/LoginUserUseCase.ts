@@ -1,12 +1,12 @@
 import { UserRepository } from "../domain/ports/UserRepository";
-import { IEncrypt } from "./services/IEncrypt";
+import { IEncript } from "./services/IEncript";
 import { CreateTokenUseCase } from "./services/CreateTokenUsecase";
 import { Auth } from "../domain/entities/Auth";
 
 export class LoginUserUseCase {
   constructor(
     readonly repo: UserRepository,
-    readonly validatePass: IEncrypt,
+    readonly validatePass: IEncript,
     readonly createToken: CreateTokenUseCase
   ) {}
   async run(email: string, password: string): Promise<string | null> {

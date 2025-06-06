@@ -1,13 +1,13 @@
 import { User } from "../domain/entities/User";
 import { UserRepository } from "../domain/ports/UserRepository";
-import { IEncrypt } from "./services/IEncrypt";
+import { IEncript } from "./services/IEncript";
 import { CreateTokenUseCase } from "./services/CreateTokenUsecase";
 import { Auth } from "../domain/entities/Auth";
 
 export class CreateUserUseCase {
   constructor(
     readonly repo: UserRepository,
-    readonly encrypt: IEncrypt,
+    readonly encrypt: IEncript,
     readonly tokenCreate: CreateTokenUseCase
   ) {}
 
@@ -27,7 +27,7 @@ export class CreateUserUseCase {
 
       const userNew = await this.repo.create(user);
       if (userNew == null) {
-        return null
+        return null;
       }
       const pyload: Auth["pyload"] = {
         id: userNew.id,
